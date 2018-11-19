@@ -22,7 +22,7 @@ class Carrera(models.Model):
 class Asignacion(models.Model):
     materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
     carrera = models.ForeignKey(Carrera, on_delete=models.CASCADE)
-    nota = models.IntegerField()
+    nota = models.IntegerField(null=True, blank=True)
 
 
 class AsignacionInLine(admin.TabularInline):
